@@ -43,6 +43,9 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+gem 'devise'
+gem 'bcrypt', '~> 3.1.11'
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

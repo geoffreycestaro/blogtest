@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -69,9 +70,7 @@ class PostsController < ApplicationController
     end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def comment_params
-    params.require(:comment).permit(:author, 
-    :comment_entry, :post_id)
-  end
-  
+  def post_params
+      params.require(:post).permit(:title, :author, :blog_entry, :user_id)
+    end
 end
